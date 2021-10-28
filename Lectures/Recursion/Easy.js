@@ -19,7 +19,7 @@ function countZeros(n) {
 //console.log(ans)
 
 
-//2. Find the factorial of a number
+// 2. Find the factorial of a number
 function factorial(n) {
   if (n <= 1) {
     return 1;
@@ -27,8 +27,32 @@ function factorial(n) {
   return n * factorial(n - 1);
 }
 
-//const ans = factorial(3);
-//console.log(ans);
+const ans = factorial(3);
+console.log(ans);
+
+// 3. Print the product of the digits passed in the input
+function digitProduct(n){
+   if (n%10 == n) {
+            return n;
+        }
+        return (n%10) * digitProduct(parseInt(n/10));
+}
+
+const ans = digitProduct(413)
+console.log(ans)
+
+// 4. Print the sum of the digits passed in the input
+function digitSum(n){
+   if (n%10 == n) {
+            return n;
+        }
+        return (n%10) + digitSum(parseInt(n/10));
+}
+
+const ans = digitSum(413)
+console.log(ans)
+
+
 
 
 
