@@ -12,3 +12,17 @@ function triangle(r, c){
 }
 
 triangle(4,0)
+
+function triangle2(r,c){
+  if (r == 0) {
+            return;
+        }
+        if (c < r) {
+            triangle2(r, c+1);
+            process.stdout.write("* ");
+        } else {
+            triangle2(r-1, 0);
+            console.log()
+        }
+}
+ triangle2(4, 0)
