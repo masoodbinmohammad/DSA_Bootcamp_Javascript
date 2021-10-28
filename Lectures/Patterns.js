@@ -1,5 +1,3 @@
-# Pattern 31
-
 function pattern31(n) {
         let originalN = n;
         n = 2 * n;
