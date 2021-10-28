@@ -54,5 +54,16 @@ console.log(ans)
 
 
 
+// 5. Print the number from N to 1 where N is any number passed in the input
 
 
+function NtoOneBoth(n){
+if (n == 0) {
+            return;
+        }
+        console.log(n);
+        NtoOneBoth(n-1);
+       console.log(n);
+}
+
+NtoOneBoth(10);
