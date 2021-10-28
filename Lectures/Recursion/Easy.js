@@ -82,3 +82,21 @@ function reverseNumber(n){
 let sum = 0;
 reverseNumber(331002389)
 console.log(sum);
+
+// 6. Reverse a number using helper function ( Because if we do not want to declate a global variable)
+
+function reverseNumber2(n){
+  let digits = parseInt((Math.log10(n))) + 1;
+  return helper(n, digits);
+ }
+
+ function helper(n, digits){
+    if (n%10 == n) {
+            return n;
+        }
+        let rem = n % 10;
+        return rem * parseInt((Math.pow(10, digits-1)))
+        + helper(parseInt(n/10), digits-1);
+ }
+
+console.log(reverseNumber2(32112233746374))
