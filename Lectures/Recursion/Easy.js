@@ -67,3 +67,18 @@ if (n == 0) {
 }
 
 NtoOneBoth(10);
+
+
+// 6. Reverse a number 
+
+function reverseNumber(n){
+   if (n == 0) {
+            return;
+        }
+        let rem = n % 10;
+        sum = sum * 10 + rem;
+        reverseNumber(parseInt(n/10));
+}
+let sum = 0;
+reverseNumber(331002389)
+console.log(sum);
