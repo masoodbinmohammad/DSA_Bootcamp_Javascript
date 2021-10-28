@@ -6,7 +6,7 @@ function pattern31(n) {
                 const atEveryIndex = originalN - Math.min(Math.min(row, col), Math.min(n - row, n - col));
                 process.stdout.write(atEveryIndex + " ");
             }
-            console.log('\n');
+            console.log();
         }
     }
 
@@ -21,7 +21,7 @@ function pattern30(n){
             for (let col = 2; col <= row; col++) {
                 process.stdout.write(col + " ");
             }
-           console.log('\n');
+           console.log();
         }
 }
 
@@ -39,10 +39,27 @@ function pattern17(n){
             for (let col = 2; col <= c; col++) {
                 process.stdout.write(col + " ");
             }
-            console.log('\n');
+            console.log();
+        }
+}
+
+function pattern28(n){
+  for (let row = 1; row < 2 * n; row++) {
+            const totalColsInRow = row > n ? 2 * n - row: row;
+
+            const noOfSpaces = n - totalColsInRow;
+            for (let s = 0; s < noOfSpaces; s++) {
+                process.stdout.write(" ");
+            }
+
+            for (let col = 0; col < totalColsInRow; col++) {
+                process.stdout.write("* ");
+            }
+            console.log();
         }
 }
 
 //pattern31(4);
 //pattern30(10);
-pattern17(3)
+//pattern17(3)
+pattern28(4)
